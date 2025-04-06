@@ -3,6 +3,9 @@ main = "src/index.ts"
 compatibility_date = "2025-03-10"
 compatibility_flags = ["nodejs_compat"]
 
+[env.production]
+vars = { NODE_ENV = "production" }
+
 # 添加定时触发器，每分钟执行一次监控检查
 [triggers]
 crons = ["* * * * *"]
@@ -10,7 +13,11 @@ crons = ["* * * * *"]
 [[d1_databases]]
 binding = "DB"
 database_name = "xugou_db"
-database_id = "32a2ca5f-3a77-4b08-965e-804612557880"
+database_id = "bdcc584a-c9f0-4df6-b06f-08f5d2bd597f"
 
 [version_metadata]
 binding = "CF_VERSION_METADATA"
+
+[vars]
+JWT_SECRET = "kabu0504@" 
+ENABLE_DB_INIT = "false" 
